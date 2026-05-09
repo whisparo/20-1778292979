@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اقوم بعمل 20%</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-1sReEWk7hgGUmiGSP+9GazXLkfePP8/9AfOOkBP2ho8+2IMZWbPUkK974NPEO07NUpZcqCpcZCp8r/wXlsNfw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 1rem;
+        }
+        .glass::before {
+            content: '';
+            position: absolute;
+            background: linear-gradient(315deg, #4f5569 0%, #9a9b99 74.9%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+    <nav class="glass sticky top-0 z-10 bg-transparent">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="logo font-bold tracking-wider text-lg">اقوم بعمل 20%</div>
+            <button class="hidden lg:block bg-transparent border-0 hover:bg-green-600 text-green-600 md:hover:text-white md:focus:ring-4 md:focus:ring-green-600">
+                WhatsApp
+            </button>
+        </div>
+    </nav>
+    <section class="hero bg-white">
+        <div class="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16 mb-8 flex flex-col text-gray-600 justify-center items-center">
+            <h1 class="text-4xl font-bold tracking-widest">مبتنيّ على المعرفة</h1>
+            <h2 class="text-3xl font-bold mt-4">اقوم بعمل 20%</h2>
+            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">بدا الآن</button>
+            <img src="https://source.unsplash.com/featured/?اقوم بعمل 20%">
+        </div>
+    </section>
+    <section class="services p-8 md:p-12 bg-gray-100 mt-8">
+        <div class="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16">
+            <h2 class="text-3xl font-bold tracking-widest">خدماتنا</h2>
+            <div class="services-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="service bg-white rounded p-8 shadow-md hover:scale-105 transition ease-out duration-300">
+                    <h3 class="text-2xl font-bold mt-4">خدمة 1</h3>
+                    <p class="text-gray-600">وصف خدمتنا الأولى.</p>
+                </div>
+                <div class="service bg-white rounded p-8 shadow-md hover:scale-105 transition ease-out duration-300">
+                    <h3 class="text-2xl font-bold mt-4">خدمة 2</h3>
+                    <p class="text-gray-600">وصف خدمتنا الثانية.</p>
+                </div>
+                <div class="service bg-white rounded p-8 shadow-md hover:scale-105 transition ease-out duration-300">
+                    <h3 class="text-2xl font-bold mt-4">خدمة 3</h3>
+                    <p class="text-gray-600">وصف خدمتنا الثالثة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button class="fixed bottom-4 right-4 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        <i class="fab fa-whatsapp"></i>
+        تواصل معنا
+    </button>
+    <form class="contact m-8 md:m-12 xl:m-16 bg-white p-8 shadow-md rounded">
+        <h2 class="text-3xl font-bold tracking-widest">اتصال بنا</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="form-group w-full">
+                <label for="name" class="text-gray-600 block mb-2">اسمك</label>
+                <input type="text" id="name" class="appearance-none block w-full py-2 px-4 bg-gray-100 border border-gray-400 rounded-md placeholder-gray-500 text-gray-600" placeholder="اسمك">
+            </div>
+            <div class="form-group w-full">
+                <label for="email" class="text-gray-600 block mb-2">بريدك الإلكتروني</label>
+                <input type="email" id="email" class="appearance-none block w-full py-2 px-4 bg-gray-100 border border-gray-400 rounded-md placeholder-gray-500 text-gray-600" placeholder="بريدك الإلكتروني">
+            </div>
+            <div class="form-group w-full">
+                <label for="message" class="text-gray-600 block mb-2">رسالتك</label>
+                <textarea id="message" class="appearance-none block w-full py-2 px-4 bg-gray-100 border border-gray-400 rounded-md placeholder-gray-500 text-gray-600" placeholder="رسالتك"></textarea>
+            </div>
+            <div class="flex justify-end w-full mt-8">
+                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">إرسال</button>
+            </div>
+        </div>
+    </form>
+    <footer class="bg-gray-100 text-gray-600 p-8 text-center">
+        صُنع بذكاء بواسطة براندو
+    </footer>
+</body>
+</html>
